@@ -19,14 +19,14 @@ const Cards = ({ movie }) => {
       {
         isLoading
         ?
-        <div className="relative mt-10 flex lg:w-44 w-28 flex-col rounded-xl shadow-md h-44">
+        <div className="relative mt-10 flex lg:w-44 w-32 flex-col rounded-xl shadow-md h-44">
             <SkeletonTheme color="#000000" highlightColor="#525252">
                 <Skeleton height={400} duration={5} />
             </SkeletonTheme>
         </div>
         :
       <Link to={`/movie/${movie.id}`}>
-        <div className="relative mt-10 flex lg:w-44 w-28 flex-col rounded-xl  text-white shadow-md hover:scale-110 hover:transition hover:duration-700 duration-300 ease-in">
+        <div className="relative mt-10 flex lg:w-44 w-32 flex-col rounded-xl  text-white shadow-md hover:scale-110 hover:transition hover:duration-700 duration-300 ease-in">
           <div className="rounded-xl">
             <img src={`https://image.tmdb.org/t/p/original${movie?movie.poster_path:""}`} alt="img-blur-shadow" layout="fill" className='rounded-lg' />
           </div>

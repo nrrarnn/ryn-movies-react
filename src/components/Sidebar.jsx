@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className="fixed -z-50 top-4 right-0 h-full w-2/4 bg-slate-800 text-white font-poppins   lg:hidden">
+    <div className="fixed -z-50 top-0 right-0 h-full w-2/4 bg-slate-800 text-white font-poppins transition duration-300 lg:hidden">
       <ul className="py-14">
         <li className="mb-4">
           <Link to="/" className="flex pl-4 hover:underline hover:text-indigo-400">

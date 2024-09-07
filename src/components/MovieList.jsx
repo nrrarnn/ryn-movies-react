@@ -32,7 +32,7 @@ const MovieList = () => {
     return (
         <div className=" bg-black pb-52 lg:px-20 px-1">
             <h2 className=" text-white font-bold text-2xl pt-10">{(type ? type : "POPULAR").toUpperCase()}</h2>
-            <div className="flex flex-wrap justify-center m-10 gap-3">
+            <div className="flex flex-wrap justify-center py-10 px-2 gap-3">
                 {
                     movieList.map(movie => (
                         <Cards movie={movie} />

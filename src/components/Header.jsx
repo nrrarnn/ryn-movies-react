@@ -12,13 +12,13 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className='top-0 left-0 w-full px-2 bg-slate-800 fixed z-50'>
-           <div className='flex justify-between items-center text-white py-5 px-20'>
-             <div className='font-poppins font-bold text-lg tracking-tight'>
+      <nav className='top-0 left-0 w-full px-2 bg-slate-900 fixed z-50'>
+          <div className='flex justify-between items-center text-white py-5 px-6 sm:px-20'>
+            <div className='font-poppins font-extrabold text-2xl'>
               Rin<span className='text-indigo-400'>Movie</span>
             </div>   
           
-          <ul className='lg:flex hidden font-poppins text-sm w-2/5 justify-between'>
+          <ul className='lg:flex hidden font-poppins text-sm gap-5 justify-between'>
             <Link to='/' className='hover:underline hover:text-indigo-400 transition duration-300'>
               <li>Home</li>
             </Link>
@@ -36,7 +36,7 @@ class Header extends Component {
             </Link>
           </ul>
           <div id='mobile' className='flex  lg:hidden' onClick={this.handleClick}>
-            <i> {this.state.clicked ? <HiX /> : <HiMenu />}</i>
+            <i> {this.state.clicked ? <HiX className='w-[30px] h-[30px]' /> : <HiMenu className='w-[30px] h-[30px]'/>}</i>
             </div>
             {this.state.clicked && <Sidebar />}
           </div> 

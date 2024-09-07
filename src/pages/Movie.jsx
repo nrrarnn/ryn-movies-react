@@ -32,7 +32,7 @@ export default function Movie() {
 
 
   const getData = () => {
-     fetch(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options)
+    fetch(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options)
   .then(response => response.json())
   .then(response => setMovie(response))
   .catch(err => console.error(err));
@@ -44,7 +44,7 @@ export default function Movie() {
   return (
     <>
 
-    <div className='h-full relative pt-16 pb-32 flex content-center items-center justify-center bg-black'>
+  <div className='h-full relative pt-16 pb-32 flex items-center justify-center bg-black font-poppins'>
   <div className='absolute top-0 w-full h-1/2 bg-center bg-cover'> 
     <img className="w-full object-cover object-center blur-sm brightness-50" style={{height: '300px'}} src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} alt=""/>
   </div>
@@ -89,7 +89,7 @@ export default function Movie() {
         </div>
 
         <div className='flex mt-20'>  
-          <Link to={'/'}><span className='px-5 py-2 bg-red-700 rounded-sm'>Homepage<ImHome3 className='inline-block -mt-1 ml-1'/></span></Link>  
+          <Link to={'/'}><span className='px-5 py-2 bg-red-700 rounded-sm text-white font-semibold'><ImHome3 className='inline-block -mt-1 mr-2'/>Homepage</span></Link>  
         </div>
       </div>
     </div>

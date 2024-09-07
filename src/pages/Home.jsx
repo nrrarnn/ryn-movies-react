@@ -34,16 +34,17 @@ export default function Home() {
   return (
     <>
         <Carousel
-         autoPlay={true}
-         showStatus={false}
-         infiniteLoop={true}
-         interval={3000}
+        autoPlay={true}
+        showStatus={false}
+        infiniteLoop={true}
+        interval={3000}
+        showIndicators={false}
         >
         {
         popularMovies.map(movie => (
         <Link to={`/movie/${movie.id}`}>
           <div className="posterImage relative">
-             <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} className="bg-cover" alt="original image" width={'500px'}/>
+            <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} className="bg-cover" alt="original image" width={'500px'}/>
           </div>
           <div className="absolute mx-auto top-0 flex justify-center items-center   w-full h-full z-50 bg-opacity-60 bg-black text-white">
           <div className="flex flex-row p-10 justify-center items-center">
