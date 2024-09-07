@@ -18,10 +18,10 @@ const MovieList = () => {
     const options = {
     method: 'GET',
     headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMWUzYzUwMDM4MDZjMmExZTY4MWMzZGM4ZjAwZjcxZiIsInN1YiI6IjY0ZGRmNWZkNTllOGE5MDEzOWQ2ZTYwMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MjMJv167JOTj_vzoybQ8YQev1gIFMHVthdUtTFbeBVA'
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMWUzYzUwMDM4MDZjMmExZTY4MWMzZGM4ZjAwZjcxZiIsInN1YiI6IjY0ZGRmNWZkNTllOGE5MDEzOWQ2ZTYwMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MjMJv167JOTj_vzoybQ8YQev1gIFMHVthdUtTFbeBVA'
     }
-   };
+    };
 
     const getData = () => {
         fetch(`https://api.themoviedb.org/3/movie/${type ? type : "popular"}?language=en-US`, options)
@@ -34,8 +34,8 @@ const MovieList = () => {
             <h2 className=" text-white font-bold text-2xl pt-10">{(type ? type : "POPULAR").toUpperCase()}</h2>
             <div className="flex flex-wrap justify-center py-10 px-2 gap-3">
                 {
-                    movieList.map(movie => (
-                        <Cards movie={movie} />
+                    movieList.map((movie, index)=> (
+                        <Cards movie={movie} key={index} />
                     ))
                 }
             </div>

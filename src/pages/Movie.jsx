@@ -22,13 +22,13 @@ export default function Movie() {
     window.scrollTo(0, 0)
   }, []) // Memanggil getData saat id berubah
 
- const options = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMWUzYzUwMDM4MDZjMmExZTY4MWMzZGM4ZjAwZjcxZiIsInN1YiI6IjY0ZGRmNWZkNTllOGE5MDEzOWQ2ZTYwMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MjMJv167JOTj_vzoybQ8YQev1gIFMHVthdUtTFbeBVA'
-  }
-};
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMWUzYzUwMDM4MDZjMmExZTY4MWMzZGM4ZjAwZjcxZiIsInN1YiI6IjY0ZGRmNWZkNTllOGE5MDEzOWQ2ZTYwMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MjMJv167JOTj_vzoybQ8YQev1gIFMHVthdUtTFbeBVA'
+    }
+  };
 
 
   const getData = () => {
@@ -85,7 +85,7 @@ export default function Movie() {
           }
         </div>   
         <div className="flex text-white font-semibold text-xl pb-3 pt-10">Synopsis</div>
-        <div className='font-thin text-white'>{currentMovieDetail ? currentMovieDetail.overview : ""}
+        <div className='font-thin text-white text-left'>{currentMovieDetail ? currentMovieDetail.overview : ""}
         </div>
 
         <div className='flex mt-20'>  

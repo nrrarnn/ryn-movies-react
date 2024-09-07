@@ -32,12 +32,11 @@ const Cards = ({ movie }) => {
           </div>
           <div className="p-2"> 
               <p className="flex justify-center font-thin">
-                {movie?movie.vote_average:''} <ImStarFull className='mt-1 p-[2px] text-yellow-400'/>
+                {movie?movie.vote_average.toFixed(1):''} <ImStarFull className='mt-1 p-[2px] text-yellow-400'/>
               </p>
             <h5 className="mb-2 block  lg:text-md text-sm font-semibold">
-               {movie?movie.original_title:''}
+              {movie?movie.original_title:''}
             </h5>
-           
           </div>
         </div>
       </Link>

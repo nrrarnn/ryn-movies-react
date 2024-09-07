@@ -47,22 +47,22 @@ export default function Home() {
             <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} className="bg-cover" alt="original image" width={'500px'}/>
           </div>
           <div className="absolute mx-auto top-0 flex justify-center items-center   w-full h-full z-50 bg-opacity-60 bg-black text-white">
-          <div className="flex flex-row p-10 justify-center items-center">
-          <div className="flex flex-col ">
-            <div className="posterImage_title font-bold text-xl sm:text-3xl">
-              {movie ? movie.original_title : ''}
+            <div className="flex flex-row p-10 justify-center items-center">
+              <div className="flex flex-col ">
+                <div className="posterImage_title font-bold text-xl sm:text-3xl">
+                  {movie ? movie.original_title : ''}
+                </div>
+                <div className="posterImage_runtime">
+                  {movie ? movie.release_date : ''}
+                </div>
+                <div className="posterImage_runtime flex-col">
+                
+                <span className="posterImage_rating flex justify-center">
+                  {movie ? movie.vote_average.toFixed(1) : ''} <AiFillStar className="mt-1 text-yellow-400" />
+                </span>
+              </div>
+              </div>
             </div>
-            <div className="posterImage_runtime">
-              {movie ? movie.release_date : ''}
-            </div>
-            <div className="posterImage_runtime flex-col">
-            
-            <span className="posterImage_rating flex justify-center">
-              {movie ? movie.vote_average : ''} <AiFillStar className="mt-1 text-yellow-400" />
-            </span>
-          </div>
-          </div>
-          </div>
           </div>
           </Link>
         ))
