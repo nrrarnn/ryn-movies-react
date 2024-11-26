@@ -20,7 +20,7 @@ export default function Movie() {
   useEffect(() => {
     getData()
     window.scrollTo(0, 0)
-  }, []) // Memanggil getData saat id berubah
+  }, [])
 
   const options = {
     method: 'GET',
